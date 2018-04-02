@@ -7,6 +7,8 @@
 
 <% if @repositories %>
 <% @repositories.each do |rep| %>
+  <%= rep['name'] %>
+  <%= rep['description'] %>
   <%= link_to rep['html_url'], rep['html_url'] %>
   <br>
 <% end %>
