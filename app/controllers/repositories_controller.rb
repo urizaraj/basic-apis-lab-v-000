@@ -14,7 +14,7 @@ class RepositoriesController < ApplicationController
     body = JSON.parse(@resp.body)
 
     if @resp.success?
-      @repositories = body['response']['items']
+      @repositories = body['items']
     else
       @error = body['meta']['errorDetail']
     end
