@@ -11,7 +11,6 @@ class RepositoriesController < ApplicationController
 
     body = JSON.parse(@resp.body)
 
-    binding.pry
 
     if @resp.success?
       @repositories = body['response']['items']
