@@ -9,8 +9,6 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
     end
 
-    binding.pry
-
     body = JSON.parse(@resp.body)
 
     if @resp.success?
