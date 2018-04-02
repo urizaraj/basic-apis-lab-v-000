@@ -9,11 +9,10 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
     end
 
-    # body = JSON.parse(@resp.body)
+    body = JSON.parse(@resp.body)
 
     if @resp.success?
-      # @repositories = body['items']
-      @repositories = @resp.body
+      @repositories = body['items']
     else
       @error = body['meta']['errorDetail']
     end
